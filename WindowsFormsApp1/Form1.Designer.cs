@@ -122,6 +122,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.loginbtn);
             this.Name = "Login";
+            this.ShowIcon = false;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

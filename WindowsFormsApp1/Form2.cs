@@ -24,71 +24,126 @@ namespace WindowsFormsApp1
             
         }
 
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+
         private void button2_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
-            fdlg.Title = "Browse";
-            fdlg.InitialDirectory = @"c:\";
-            fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
-            fdlg.FilterIndex = 2;
-            fdlg.RestoreDirectory = true;
-            if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+
+            if (comboBox1.Text == "Word to PDF")
             {
-                textBox1.Text = fdlg.FileName;
+
+
+                System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
+                fdlg.Title = "Browse";
+                fdlg.InitialDirectory = @"c:\";
+                fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
+                fdlg.FilterIndex = 2;
+                fdlg.RestoreDirectory = true;
+                if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox1.Text = fdlg.FileName;
+                }
             }
+
+            else if (comboBox1.Text == "PDF to Excel")
+            {
+                System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
+                fdlg.Title = "Browse";
+                fdlg.InitialDirectory = @"c:\";
+                fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
+                fdlg.FilterIndex = 2;
+                fdlg.RestoreDirectory = true;
+                if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox1.Text = fdlg.FileName;
+                }
+            }
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
-            
-            this.Hide();
-            PleaseWait pw = new PleaseWait();
-            pw.Show();
+            if (comboBox1.Text == "Word to PDF")
+            {
+                this.Hide();
+                PleaseWait pw = new PleaseWait();
+                pw.Show();
 
 
-            Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
-
-            
-
-            object oMissing = System.Reflection.Missing.Value;
-
-            string path = textBox1.Text;
-            FileInfo fileInfo = new FileInfo(@path);
-            
-            
-            
-            word.Visible = false;
-            word.ScreenUpdating = false;
+                Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
 
 
 
-            Document doc = word.Documents.Open(path);
-            doc.Activate();
+                object oMissing = System.Reflection.Missing.Value;
+
+                string path = textBox1.Text;
+                FileInfo fileInfo = new FileInfo(@path);
+
+
+
+                word.Visible = false;
+                word.ScreenUpdating = false;
+
+
+
+                Document doc = word.Documents.Open(path);
+                doc.Activate();
 
 
                 object outputFileName = path.Replace(".docx", ".pdf");
                 object fileFormat = WdSaveFormat.wdFormatPDF;
 
 
-            doc.SaveAs(outputFileName, WdSaveFormat.wdFormatPDF);
+                doc.SaveAs(outputFileName, WdSaveFormat.wdFormatPDF);
 
 
-            object saveChanges = WdSaveOptions.wdDoNotSaveChanges;
+                object saveChanges = WdSaveOptions.wdDoNotSaveChanges;
                 ((_Document)doc).Close(ref saveChanges, ref oMissing, ref oMissing);
                 doc = null;
-            
 
-            ((_Application)word).Quit(ref oMissing, ref oMissing, ref oMissing);
-            word = null;
 
-            pw.Close();
-            
-            System.Windows.Forms.MessageBox.Show("The file is converted\n Thanks for using my app.");
-            
-            System.Windows.Forms.Application.Exit();
+                ((_Application)word).Quit(ref oMissing, ref oMissing, ref oMissing);
+                word = null;
 
+                pw.Close();
+                EndForm ef = new EndForm();
+                ef.Show();
+
+            }
+
+            else if (comboBox1.Text == "PDF to Excel")
+            {
+
+                this.Hide();
+                PleaseWait pw = new PleaseWait();
+                pw.Show();
+
+                string path = comboBox1.Text;
+
+                SautinSoft.PdfFocus f = new PdfFocus();
+
+                f.OpenPdf(path);
+
+                if (f.PageCount > 0)
+
+                    f.ToExcel(path.Replace(".pdf", ".xls"));
+
+
+                pw.Close();
+                EndForm ef = new EndForm();
+                ef.Show();
+            }
         }
+            
+            
 
         private void AppForm_Load(object sender, EventArgs e)
         {
@@ -98,7 +153,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+       /* private void button3_Click(object sender, EventArgs e)
         {
 
             System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
@@ -113,21 +168,9 @@ namespace WindowsFormsApp1
             }
 
             
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            string path = textBox2.Text;
-
-            SautinSoft.PdfFocus f = new PdfFocus();
-
-            f.OpenPdf(path);
-
-            if (f.PageCount > 0)
-
-                f.ToExcel(path.Replace(".pdf", ".xls"));
-        }
+        }*/
+        
+        
     }
 
 
