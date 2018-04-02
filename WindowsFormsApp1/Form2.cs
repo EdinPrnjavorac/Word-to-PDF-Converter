@@ -17,7 +17,8 @@ namespace WindowsFormsApp1
 {
     public partial class AppForm : System.Windows.Forms.Form
     {
-        public AppForm()
+        
+        public AppForm() 
 
         {
             InitializeComponent();
@@ -153,23 +154,21 @@ namespace WindowsFormsApp1
 
         }
 
-       /* private void button3_Click(object sender, EventArgs e)
+        private void mail_Click(object sender, EventArgs e)
         {
 
-            System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
-            fdlg.Title = "Browse";
-            fdlg.InitialDirectory = @"c:\";
-            fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
-            fdlg.FilterIndex = 2;
-            fdlg.RestoreDirectory = true;
-            if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                textBox2.Text = fdlg.FileName;
-            }
+           
+            
+            mailAuth ma = new mailAuth();
+            this.Hide();
+            ma.Show();
 
             
-        }*/
-        
+
+            
+        }
+
+       
         
     }
 

@@ -40,10 +40,11 @@
             // loginbtn
             // 
             this.loginbtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.loginbtn.Location = new System.Drawing.Point(255, 197);
+            this.loginbtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.loginbtn.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.loginbtn.Location = new System.Drawing.Point(273, 198);
             this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(83, 32);
+            this.loginbtn.Size = new System.Drawing.Size(95, 32);
             this.loginbtn.TabIndex = 0;
             this.loginbtn.Text = "Login";
             this.loginbtn.UseVisualStyleBackColor = false;
@@ -51,27 +52,32 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 64);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(239, 73);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
+            this.textBox1.Size = new System.Drawing.Size(164, 26);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 110);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox2.Location = new System.Drawing.Point(239, 117);
             this.textBox2.MinimumSize = new System.Drawing.Size(8, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
+            this.textBox2.Size = new System.Drawing.Size(164, 26);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // usernametxt
             // 
             this.usernametxt.AutoSize = true;
             this.usernametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.usernametxt.Location = new System.Drawing.Point(61, 71);
+            this.usernametxt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.usernametxt.Location = new System.Drawing.Point(78, 76);
             this.usernametxt.Name = "usernametxt";
             this.usernametxt.Size = new System.Drawing.Size(83, 20);
             this.usernametxt.TabIndex = 3;
@@ -81,7 +87,8 @@
             // 
             this.passwordtxt.AutoSize = true;
             this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.passwordtxt.Location = new System.Drawing.Point(61, 117);
+            this.passwordtxt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.passwordtxt.Location = new System.Drawing.Point(78, 120);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(78, 20);
             this.passwordtxt.TabIndex = 4;
@@ -90,6 +97,7 @@
             // 
             // cancelbtn
             // 
+            this.cancelbtn.ForeColor = System.Drawing.Color.Red;
             this.cancelbtn.Location = new System.Drawing.Point(465, 315);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(75, 23);
@@ -100,19 +108,21 @@
             // 
             // registerbtn
             // 
+            this.registerbtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.registerbtn.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.registerbtn.Location = new System.Drawing.Point(64, 315);
             this.registerbtn.Name = "registerbtn";
             this.registerbtn.Size = new System.Drawing.Size(75, 23);
             this.registerbtn.TabIndex = 6;
             this.registerbtn.Text = "Register";
-            this.registerbtn.UseVisualStyleBackColor = true;
+            this.registerbtn.UseVisualStyleBackColor = false;
             this.registerbtn.Click += new System.EventHandler(this.registerbtn_Click_1);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(579, 366);
             this.Controls.Add(this.registerbtn);
             this.Controls.Add(this.cancelbtn);

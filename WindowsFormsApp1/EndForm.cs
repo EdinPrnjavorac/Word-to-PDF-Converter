@@ -35,5 +35,17 @@ namespace WindowsFormsApp1
             Size screenSize = Screen.PrimaryScreen.WorkingArea.Size;
             Location = new Point(screenSize.Width / 2 - Width / 2, screenSize.Height / 2 - Height / 2);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mailAuth ma = new mailAuth();
+            ma.Show();
+        }
     }
 }
