@@ -29,17 +29,13 @@ namespace WindowsFormsApp1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (comboBox1.Text == "Word to PDF")
-            {
-
-
+            
                 System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
                 fdlg.Title = "Browse";
                 fdlg.InitialDirectory = @"c:\";
@@ -50,30 +46,13 @@ namespace WindowsFormsApp1
                 {
                     textBox1.Text = fdlg.FileName;
                 }
-            }
-
-            else if (comboBox1.Text == "PDF to Excel")
-            {
-                System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
-                fdlg.Title = "Browse";
-                fdlg.InitialDirectory = @"c:\";
-                fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
-                fdlg.FilterIndex = 2;
-                fdlg.RestoreDirectory = true;
-                if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    textBox1.Text = fdlg.FileName;
-                }
-            }
-
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
-            if (comboBox1.Text == "Word to PDF")
-            {
+            
                 this.Hide();
                 PleaseWait pw = new PleaseWait();
                 pw.Show();
@@ -117,31 +96,8 @@ namespace WindowsFormsApp1
                 pw.Close();
                 EndForm ef = new EndForm();
                 ef.Show();
-
-            }
-
-            else if (comboBox1.Text == "PDF to Excel")
-            {
-
-                this.Hide();
-                PleaseWait pw = new PleaseWait();
-                pw.Show();
-
-                string path = comboBox1.Text;
-
-                SautinSoft.PdfFocus f = new PdfFocus();
-
-                f.OpenPdf(path);
-
-                if (f.PageCount > 0)
-
-                    f.ToExcel(path.Replace(".pdf", ".xls"));
-
-
-                pw.Close();
-                EndForm ef = new EndForm();
-                ef.Show();
-            }
+            
+           
         }
             
             
@@ -157,14 +113,11 @@ namespace WindowsFormsApp1
         private void mail_Click(object sender, EventArgs e)
         {
 
-           
+           //opens new form with mail authentication and send button
             
             mailAuth ma = new mailAuth();
             this.Hide();
             ma.Show();
-
-            
-
             
         }
 

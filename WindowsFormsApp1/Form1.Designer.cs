@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginbtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -97,8 +98,9 @@
             // 
             // cancelbtn
             // 
+            this.cancelbtn.Font = new System.Drawing.Font("Nina", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelbtn.ForeColor = System.Drawing.Color.Red;
-            this.cancelbtn.Location = new System.Drawing.Point(465, 315);
+            this.cancelbtn.Location = new System.Drawing.Point(448, 315);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(75, 23);
             this.cancelbtn.TabIndex = 5;
@@ -109,10 +111,11 @@
             // registerbtn
             // 
             this.registerbtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.registerbtn.Font = new System.Drawing.Font("Nina", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.registerbtn.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.registerbtn.Location = new System.Drawing.Point(64, 315);
             this.registerbtn.Name = "registerbtn";
-            this.registerbtn.Size = new System.Drawing.Size(75, 23);
+            this.registerbtn.Size = new System.Drawing.Size(80, 23);
             this.registerbtn.TabIndex = 6;
             this.registerbtn.Text = "Register";
             this.registerbtn.UseVisualStyleBackColor = false;
@@ -131,9 +134,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.loginbtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
-            this.ShowIcon = false;
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
