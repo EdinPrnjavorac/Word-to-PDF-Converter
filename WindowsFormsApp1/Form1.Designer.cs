@@ -98,13 +98,13 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Font = new System.Drawing.Font("Nina", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cancelbtn.Font = new System.Drawing.Font("Nina", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelbtn.ForeColor = System.Drawing.Color.Red;
             this.cancelbtn.Location = new System.Drawing.Point(448, 315);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(75, 23);
             this.cancelbtn.TabIndex = 5;
-            this.cancelbtn.Text = "Cancel";
+            this.cancelbtn.Text = "Exit";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 

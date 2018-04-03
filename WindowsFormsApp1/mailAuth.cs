@@ -62,13 +62,13 @@ namespace WindowsFormsApp1
                 SmtpServer.Credentials = new System.Net.NetworkCredential(emailaddress, password);
                 SmtpServer.EnableSsl = true;
 
-                if (SmtpServer.EnableSsl = false)
-                {
-                    MessageBox.Show("Invalid credentials.");
-                }
-
+                
                 SmtpServer.Send(mail);
                 System.Windows.Forms.MessageBox.Show("Mail sent");
+
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
             }
 
             
@@ -84,6 +84,14 @@ namespace WindowsFormsApp1
             //show in center of the screen
             Size screenSize = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Size;
             Location = new Point(screenSize.Width / 2 - Width / 2, screenSize.Height / 2 - Height / 2);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            AppForm af = new AppForm();
+            this.Hide();
+            af.Show();
         }
     }
 }

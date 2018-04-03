@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             //show in center of the screen
             Size screenSize = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Size;
             Location = new Point(screenSize.Width / 2 - Width / 2, screenSize.Height / 2 - Height / 2);
-
+            
         }
 
         private void mail_Click(object sender, EventArgs e)
