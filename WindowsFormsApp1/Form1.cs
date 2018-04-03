@@ -37,35 +37,38 @@ namespace WindowsFormsApp1
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=BST144;Initial Catalog=logindb;Integrated Security=True";
-            con.Open();
-            string username = textBox1.Text;
-            string password = textBox2.Text;
-            SqlCommand cmd = new SqlCommand("SELECT username,password FROM users WHERE username='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("Login sucess ");
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=BST144;Initial Catalog=logindb;Integrated Security=True";
+                con.Open();
+                string username = textBox1.Text;
+                string password = textBox2.Text;
+                SqlCommand cmd = new SqlCommand("SELECT username,password FROM users WHERE username='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Login sucess ");
 
-                AppForm m = new AppForm();
-                m.Show();
-                this.Hide();
-                m.Show();
+                    AppForm m = new AppForm();
+                    m.Show();
+                    this.Hide();
+                    m.Show();
 
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Login, please check username and password");
+                    textBox1.Clear();
+                    textBox2.Clear();
+
+                }
+                con.Close();
 
             }
-            else
-            {
-                MessageBox.Show("Invalid Login, please check username and password");
-                textBox1.Clear();
-                textBox2.Clear();
-
-            }
-            con.Close();
 
         }
 

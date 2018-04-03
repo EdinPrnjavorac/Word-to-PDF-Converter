@@ -17,7 +17,9 @@ namespace WindowsFormsApp1
 {
     public partial class AppForm : System.Windows.Forms.Form
     {
-        
+
+        private bool button1Clicked = false;
+
         public AppForm() 
 
         {
@@ -44,9 +46,11 @@ namespace WindowsFormsApp1
             
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            
+                bool button1Clicked = true;
             
                 this.Hide();
                 PleaseWait pw = new PleaseWait();
@@ -120,12 +124,19 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (button1Clicked)
+            {
+                string filename = textBox1.Text.Replace(".docx", ".pdf");
 
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(filename);
+                System.Diagnostics.Process.Start(startInfo);
+                button1Clicked = false;
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("No file converted.");
+            }
             
-            string filename = textBox1.Text.Replace(".docx", ".pdf");
-
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(filename);
-            System.Diagnostics.Process.Start(startInfo);
         }
     }
 
