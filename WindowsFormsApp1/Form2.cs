@@ -25,12 +25,7 @@ namespace WindowsFormsApp1
             
         }
 
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -60,20 +55,17 @@ namespace WindowsFormsApp1
 
                 Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
 
-
-
+            
                 object oMissing = System.Reflection.Missing.Value;
 
                 string path = textBox1.Text;
                 FileInfo fileInfo = new FileInfo(@path);
 
-
-
+            
                 word.Visible = false;
                 word.ScreenUpdating = false;
 
-
-
+            
                 Document doc = word.Documents.Open(path);
                 doc.Activate();
 
@@ -93,11 +85,10 @@ namespace WindowsFormsApp1
                 ((_Application)word).Quit(ref oMissing, ref oMissing, ref oMissing);
                 word = null;
 
-                pw.Close();
-                EndForm ef = new EndForm();
-                ef.Show();
             
-           
+                pw.Close();
+                this.Show();
+            
         }
             
             
@@ -121,8 +112,21 @@ namespace WindowsFormsApp1
             
         }
 
-       
         
+    public void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            
+            string filename = textBox1.Text.Replace(".docx", ".pdf");
+
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(filename);
+            System.Diagnostics.Process.Start(startInfo);
+        }
     }
 
 

@@ -12,9 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class EndForm : Form
     {
-        public EndForm()
+
+        private AppForm af = new AppForm();
+        public EndForm(string path)
         {
             InitializeComponent();
+            string filename = path;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +49,15 @@ namespace WindowsFormsApp1
             this.Hide();
             mailAuth ma = new mailAuth();
             ma.Show();
+        }
+        
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            string filename = path;
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(filename);
+            System.Diagnostics.Process.Start(startInfo);
         }
     }
 }
