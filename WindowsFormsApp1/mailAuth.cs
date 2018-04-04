@@ -39,16 +39,7 @@ namespace WindowsFormsApp1
                 string recipient = textBox3.Text;
                 string path = AppForm.SetValueForText1;
                  
-                /*System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
-                fdlg.Title = "Browse";
-                fdlg.InitialDirectory = @"c:\";
-                fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
-
-                if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    textBox1.Text = fdlg.FileName;
-                }*/
-
+                
                 System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 

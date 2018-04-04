@@ -98,6 +98,8 @@
             // 
             // cancelbtn
             // 
+            this.cancelbtn.FlatAppearance.BorderSize = 0;
+            this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Nina", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelbtn.ForeColor = System.Drawing.Color.Red;
             this.cancelbtn.Location = new System.Drawing.Point(448, 315);
@@ -110,8 +112,10 @@
             // 
             // registerbtn
             // 
-            this.registerbtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.registerbtn.Font = new System.Drawing.Font("Nina", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.registerbtn.BackColor = System.Drawing.Color.LightBlue;
+            this.registerbtn.FlatAppearance.BorderSize = 0;
+            this.registerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerbtn.Font = new System.Drawing.Font("Nina", 9F, System.Drawing.FontStyle.Bold);
             this.registerbtn.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.registerbtn.Location = new System.Drawing.Point(64, 315);
             this.registerbtn.Name = "registerbtn";
