@@ -50,10 +50,9 @@ namespace WindowsFormsApp1
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Login sucess ");
+                    //MessageBox.Show("Login sucess ");
 
                     AppForm m = new AppForm();
-                    m.Show();
                     this.Hide();
                     m.Show();
 

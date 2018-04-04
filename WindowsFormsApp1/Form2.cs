@@ -26,7 +26,8 @@ namespace WindowsFormsApp1
             
         }
 
-       
+        private bool button1Clicked = false;
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -42,14 +43,11 @@ namespace WindowsFormsApp1
                 {
                     textBox1.Text = fdlg.FileName;
                 }
-            
+
         }
 
 
-
-        private bool button1Clicked = false;
-
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
                 button1Clicked = true;
@@ -91,7 +89,8 @@ namespace WindowsFormsApp1
                 ((_Application)word).Quit(ref oMissing, ref oMissing, ref oMissing);
                 word = null;
 
-            
+            System.Windows.Forms.MessageBox.Show("Your file has been converted.\n You can view it by clicking \"File preview\" or send it via email by clicking \"Mail\" button");
+
             pw.Close();
                 this.Show();
             
@@ -124,6 +123,8 @@ namespace WindowsFormsApp1
 
         }
 
+
+        //file preview, if "Convert" was clicked
         private void button3_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(textBox1.Text) && button1Clicked)
@@ -141,7 +142,7 @@ namespace WindowsFormsApp1
 
             button1Clicked = false;
         }
-    }
 
+    }
 
 }
