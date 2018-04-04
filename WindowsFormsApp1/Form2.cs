@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         }
 
         private bool button1Clicked = false;
-
+        public static string SetValueForText1 = "";
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -89,6 +89,8 @@ namespace WindowsFormsApp1
                 ((_Application)word).Quit(ref oMissing, ref oMissing, ref oMissing);
                 word = null;
 
+            
+
             System.Windows.Forms.MessageBox.Show("Your file has been converted.\n You can view it by clicking \"File preview\" or send it via email by clicking \"Mail\" button");
 
             pw.Close();
@@ -109,8 +111,10 @@ namespace WindowsFormsApp1
         private void mail_Click(object sender, EventArgs e)
         {
 
-           //opens new form with mail authentication and send button
-            
+            //opens new form with mail authentication and send button
+
+            SetValueForText1 = textBox1.Text.Replace(".docx",".pdf");
+
             mailAuth ma = new mailAuth();
             this.Hide();
             ma.Show();
@@ -133,6 +137,8 @@ namespace WindowsFormsApp1
 
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(filename);
                 System.Diagnostics.Process.Start(startInfo);
+
+                
                 button1Clicked = false;
             }
             else

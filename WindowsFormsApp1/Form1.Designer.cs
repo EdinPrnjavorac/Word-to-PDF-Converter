@@ -43,7 +43,7 @@
             this.loginbtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.loginbtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.loginbtn.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.loginbtn.Location = new System.Drawing.Point(273, 198);
+            this.loginbtn.Location = new System.Drawing.Point(273, 208);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(95, 32);
             this.loginbtn.TabIndex = 0;
@@ -64,7 +64,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(239, 117);
+            this.textBox2.Location = new System.Drawing.Point(239, 136);
             this.textBox2.MinimumSize = new System.Drawing.Size(8, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -89,7 +89,7 @@
             this.passwordtxt.AutoSize = true;
             this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.passwordtxt.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.passwordtxt.Location = new System.Drawing.Point(78, 120);
+            this.passwordtxt.Location = new System.Drawing.Point(78, 139);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(78, 20);
             this.passwordtxt.TabIndex = 4;

@@ -18,16 +18,18 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public void textBox1_TextChanged(object sender, EventArgs e)
+        public string path;
+
+        private void mailAuth_Load(object sender, EventArgs e)
         {
+            //show in center of the screen
+            Size screenSize = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Size;
+            Location = new Point(screenSize.Width / 2 - Width / 2, screenSize.Height / 2 - Height / 2);
 
         }
 
-        public void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        
         private void button1_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrEmpty(textBox2.Text) && !String.IsNullOrEmpty(textBox3.Text))
@@ -35,8 +37,9 @@ namespace WindowsFormsApp1
                 string emailaddress = textBox1.Text;
                 string password = textBox2.Text;
                 string recipient = textBox3.Text;
-
-                System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
+                string path = AppForm.SetValueForText1;
+                 
+                /*System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
                 fdlg.Title = "Browse";
                 fdlg.InitialDirectory = @"c:\";
                 fdlg.Filter = "docx files (*.docx)|*.docx|All files (*.*)|*.*";
@@ -44,7 +47,7 @@ namespace WindowsFormsApp1
                 if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     textBox1.Text = fdlg.FileName;
-                }
+                }*/
 
                 System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
@@ -55,7 +58,7 @@ namespace WindowsFormsApp1
                 mail.Body = "";
 
                 System.Net.Mail.Attachment attachment;
-                attachment = new System.Net.Mail.Attachment(textBox1.Text);
+                attachment = new System.Net.Mail.Attachment(path);
                 mail.Attachments.Add(attachment);
 
                 SmtpServer.Port = 587;
@@ -78,13 +81,7 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void mailAuth_Load(object sender, EventArgs e)
-        {
-            //show in center of the screen
-            Size screenSize = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Size;
-            Location = new Point(screenSize.Width / 2 - Width / 2, screenSize.Height / 2 - Height / 2);
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -92,6 +89,21 @@ namespace WindowsFormsApp1
             AppForm af = new AppForm();
             this.Hide();
             af.Show();
+        }
+
+        public void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            //textBox4.Text = 
         }
     }
 }
