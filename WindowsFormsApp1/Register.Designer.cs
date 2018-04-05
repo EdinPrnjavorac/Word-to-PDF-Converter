@@ -65,47 +65,47 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirm password";
             // 
-            // textBox1
+            // txtusernamelogin
             // 
             this.textBox1.Location = new System.Drawing.Point(154, 46);
-            this.textBox1.Name = "textBox1";
+            this.textBox1.Name = "txtusernamelogin";
             this.textBox1.Size = new System.Drawing.Size(117, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtpasswordlogin
             // 
             this.textBox2.Location = new System.Drawing.Point(154, 81);
-            this.textBox2.Name = "textBox2";
+            this.textBox2.Name = "txtpasswordlogin";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(117, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txtrecipient
             // 
             this.textBox3.Location = new System.Drawing.Point(154, 122);
-            this.textBox3.Name = "textBox3";
+            this.textBox3.Name = "txtrecipient";
             this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(117, 20);
             this.textBox3.TabIndex = 5;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // button1
+            // btnconvert
             // 
             this.button1.Location = new System.Drawing.Point(164, 196);
-            this.button1.Name = "button1";
+            this.button1.Name = "btnconvert";
             this.button1.Size = new System.Drawing.Size(107, 29);
             this.button1.TabIndex = 6;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnbrowse
             // 
             this.button2.Location = new System.Drawing.Point(164, 274);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
+            this.button2.Name = "btnbrowse";
             this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 7;
             this.button2.Text = "Back to login";

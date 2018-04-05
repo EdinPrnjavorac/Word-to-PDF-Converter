@@ -37,14 +37,14 @@ namespace WindowsFormsApp1
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrEmpty(textBox2.Text))
+            if (!String.IsNullOrEmpty(txtusernamelogin.Text) && !String.IsNullOrEmpty(txtpasswordlogin.Text))
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Data Source=BST144;Initial Catalog=logindb;Integrated Security=True";
                 con.Open();
-                string username = textBox1.Text;
-                string password = textBox2.Text;
-                SqlCommand cmd = new SqlCommand("SELECT username,password FROM users WHERE username='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
+                string username = txtusernamelogin.Text;
+                string password = txtpasswordlogin.Text;
+                SqlCommand cmd = new SqlCommand("SELECT username,password FROM users WHERE username='" + txtusernamelogin.Text + "'and password='" + txtpasswordlogin.Text + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -61,8 +61,8 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("Invalid Login, please check username and password");
-                    textBox1.Clear();
-                    textBox2.Clear();
+                    txtusernamelogin.Clear();
+                    txtpasswordlogin.Clear();
 
                 }
                 con.Close();

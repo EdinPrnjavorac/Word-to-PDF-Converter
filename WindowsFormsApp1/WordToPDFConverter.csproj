@@ -77,6 +77,11 @@
     <Compile Include="mailAuth.Designer.cs">
       <DependentUpon>mailAuth.cs</DependentUpon>
     </Compile>
+    <Compile Include="mailIcon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mailIcon.resx</DependentUpon>
+    </Compile>
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +105,10 @@
     <EmbeddedResource Include="mailAuth.resx">
       <DependentUpon>mailAuth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mailIcon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mailIcon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +120,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -138,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

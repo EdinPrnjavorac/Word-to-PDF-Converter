@@ -32,11 +32,11 @@ namespace WindowsFormsApp1
         
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrEmpty(textBox2.Text) && !String.IsNullOrEmpty(textBox3.Text))
+            if (!String.IsNullOrEmpty(txtemail.Text) && !String.IsNullOrEmpty(txtpassword.Text) && !String.IsNullOrEmpty(txtrecipient.Text))
             {
-                string emailaddress = textBox1.Text;
-                string password = textBox2.Text;
-                string recipient = textBox3.Text;
+                string emailaddress = txtemail.Text;
+                string password = txtpassword.Text;
+                string recipient = txtrecipient.Text;
                 string path = AppForm.SetValueForText1;
                  
                 
@@ -60,9 +60,9 @@ namespace WindowsFormsApp1
                 SmtpServer.Send(mail);
                 System.Windows.Forms.MessageBox.Show("Mail sent");
 
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
+                txtemail.Clear();
+                txtpassword.Clear();
+                txtrecipient.Clear();
             }
 
             

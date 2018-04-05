@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mailAuth));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.btnsend = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtrecipient = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,35 +61,35 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // txtemail
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtemail.Location = new System.Drawing.Point(254, 47);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(144, 20);
+            this.txtemail.TabIndex = 2;
+            this.txtemail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(254, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtpassword.Location = new System.Drawing.Point(254, 125);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.Size = new System.Drawing.Size(144, 20);
+            this.txtpassword.TabIndex = 3;
+            this.txtpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button1
+            // btnsend
             // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(277, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnsend.BackColor = System.Drawing.Color.IndianRed;
+            this.btnsend.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnsend.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnsend.Location = new System.Drawing.Point(277, 262);
+            this.btnsend.Name = "btnsend";
+            this.btnsend.Size = new System.Drawing.Size(83, 27);
+            this.btnsend.TabIndex = 4;
+            this.btnsend.Text = "Send";
+            this.btnsend.UseVisualStyleBackColor = false;
+            this.btnsend.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -102,13 +102,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Recipient";
             // 
-            // textBox3
+            // txtrecipient
             // 
-            this.textBox3.Location = new System.Drawing.Point(254, 191);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtrecipient.Location = new System.Drawing.Point(254, 191);
+            this.txtrecipient.Name = "txtrecipient";
+            this.txtrecipient.Size = new System.Drawing.Size(144, 20);
+            this.txtrecipient.TabIndex = 6;
+            this.txtrecipient.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button2
             // 
@@ -116,7 +116,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.back_icon;
             this.button2.Location = new System.Drawing.Point(-10, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 32);
@@ -131,11 +131,11 @@
             this.BackColor = System.Drawing.Color.Salmon;
             this.ClientSize = new System.Drawing.Size(578, 332);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtrecipient);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnsend);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -151,11 +151,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.Button btnsend;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtrecipient;
         private System.Windows.Forms.Button button2;
     }
 }

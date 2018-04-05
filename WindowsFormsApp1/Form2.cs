@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
                 fdlg.RestoreDirectory = true;
                 if (fdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    textBox1.Text = fdlg.FileName;
+                    txtfilename.Text = fdlg.FileName;
                 }
 
         }
@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
             
                 object oMissing = System.Reflection.Missing.Value;
 
-                string path = textBox1.Text;
+                string path = txtfilename.Text;
                 FileInfo fileInfo = new FileInfo(@path);
 
             
@@ -111,9 +111,9 @@ namespace WindowsFormsApp1
         private void mail_Click(object sender, EventArgs e)
         {
 
-            //opens new form with mail authentication and send button
+            //opens new form with btnmail authentication and send button
 
-            SetValueForText1 = textBox1.Text.Replace(".docx",".pdf");
+            SetValueForText1 = txtfilename.Text.Replace(".docx",".pdf");
 
             mailAuth ma = new mailAuth();
             this.Hide();
@@ -131,9 +131,9 @@ namespace WindowsFormsApp1
         //file preview, if "Convert" was clicked
         private void button3_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBox1.Text) && button1Clicked)
+            if (!String.IsNullOrEmpty(txtfilename.Text) && button1Clicked)
             {
-                string filename = textBox1.Text.Replace(".docx", ".pdf");
+                string filename = txtfilename.Text.Replace(".docx", ".pdf");
 
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(filename);
                 System.Diagnostics.Process.Start(startInfo);
