@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace WindowsFormsApp1
+namespace WordToPDFConverter
 {
     public partial class Register : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace WordToPDFConverter
 {
     partial class mailAuth
     {
@@ -89,7 +89,7 @@
             this.btnsend.TabIndex = 4;
             this.btnsend.Text = "Send";
             this.btnsend.UseVisualStyleBackColor = false;
-            this.btnsend.Click += new System.EventHandler(this.button1_Click);
+            this.btnsend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // label3
             // 
@@ -116,13 +116,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.back_icon;
+            this.button2.Image = global::WordToPDFConverter.Properties.Resources.back_icon;
             this.button2.Location = new System.Drawing.Point(-10, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 32);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // mailAuth
             // 

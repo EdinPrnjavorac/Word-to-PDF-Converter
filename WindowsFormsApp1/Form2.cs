@@ -13,7 +13,7 @@ using SautinSoft;
 using SautinSoft.Document;
 
 
-namespace WindowsFormsApp1
+namespace WordToPDFConverter
 {
     public partial class AppForm : System.Windows.Forms.Form
     {

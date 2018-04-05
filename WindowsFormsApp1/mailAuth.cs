@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 
-namespace WindowsFormsApp1
+namespace WordToPDFConverter
 {
     public partial class mailAuth : Form
     {
@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
 
        
         
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtemail.Text) && !String.IsNullOrEmpty(txtpassword.Text) && !String.IsNullOrEmpty(txtrecipient.Text))
             {
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
         }
         
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             
             AppForm af = new AppForm();
@@ -91,10 +91,6 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            //textBox4.Text = 
-        }
+        
     }
 }

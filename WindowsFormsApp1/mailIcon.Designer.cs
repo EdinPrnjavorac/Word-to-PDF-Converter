@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApp1 {
+namespace WordToPDFConverter {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1 {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WindowsFormsApp1.mailIcon", typeof(mailIcon).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WordToPDFConverter.mailIcon", typeof(mailIcon).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1 {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string mailIcon {
+        internal static string mailicon {
             get {
                 return ResourceManager.GetString("mailIcon", resourceCulture);
             }

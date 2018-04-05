@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 
-namespace WindowsFormsApp1
+namespace WordToPDFConverter
 {
     public partial class Login : Form
     {
@@ -25,17 +25,17 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
            
         }
 
-        private void loginbtn_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtusernamelogin.Text) && !String.IsNullOrEmpty(txtpasswordlogin.Text))
             {
@@ -71,19 +71,19 @@ namespace WindowsFormsApp1
 
         }
 
-        private void cancelbtn_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
 
             Application.Exit();
         }
 
-        private void passwordtxt_Click(object sender, EventArgs e)
+        private void txtPassword_Click(object sender, EventArgs e)
         {
 
         }
 
 
-        private void registerbtn_Click_1(object sender, EventArgs e)
+        private void btnRegister_Click_1(object sender, EventArgs e)
         {
             Register r = new Register();
             this.Hide();

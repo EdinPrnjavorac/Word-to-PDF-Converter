@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace WordToPDFConverter
 {
     partial class Login
     {
@@ -49,7 +49,7 @@
             this.btnlogin.TabIndex = 0;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
-            this.btnlogin.Click += new System.EventHandler(this.loginbtn_Click);
+            this.btnlogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtusernamelogin
             // 
@@ -59,7 +59,7 @@
             this.txtusernamelogin.Size = new System.Drawing.Size(164, 26);
             this.txtusernamelogin.TabIndex = 1;
             this.txtusernamelogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtusernamelogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtusernamelogin.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtpasswordlogin
             // 
@@ -71,7 +71,7 @@
             this.txtpasswordlogin.Size = new System.Drawing.Size(164, 26);
             this.txtpasswordlogin.TabIndex = 2;
             this.txtpasswordlogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpasswordlogin.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtpasswordlogin.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // usernametxt
             // 
@@ -94,7 +94,7 @@
             this.passwordtxt.Size = new System.Drawing.Size(78, 20);
             this.passwordtxt.TabIndex = 4;
             this.passwordtxt.Text = "Password";
-            this.passwordtxt.Click += new System.EventHandler(this.passwordtxt_Click);
+            this.passwordtxt.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // btnexit
             // 
@@ -108,7 +108,7 @@
             this.btnexit.TabIndex = 5;
             this.btnexit.Text = "Exit";
             this.btnexit.UseVisualStyleBackColor = true;
-            this.btnexit.Click += new System.EventHandler(this.cancelbtn_Click);
+            this.btnexit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnregister
             // 
@@ -123,7 +123,7 @@
             this.btnregister.TabIndex = 6;
             this.btnregister.Text = "Register";
             this.btnregister.UseVisualStyleBackColor = false;
-            this.btnregister.Click += new System.EventHandler(this.registerbtn_Click_1);
+            this.btnregister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // Login
             // 
