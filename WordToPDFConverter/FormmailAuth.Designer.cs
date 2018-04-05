@@ -44,7 +44,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(81, 48);
+            this.label1.Location = new System.Drawing.Point(81, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(254, 47);
+            this.txtemail.Location = new System.Drawing.Point(254, 61);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(144, 20);
             this.txtemail.TabIndex = 2;
@@ -83,7 +83,7 @@
             this.btnsend.BackColor = System.Drawing.Color.IndianRed;
             this.btnsend.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnsend.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsend.Location = new System.Drawing.Point(277, 262);
+            this.btnsend.Location = new System.Drawing.Point(286, 261);
             this.btnsend.Name = "btnsend";
             this.btnsend.Size = new System.Drawing.Size(83, 27);
             this.btnsend.TabIndex = 4;

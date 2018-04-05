@@ -86,11 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>logindbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormmailAuth.cs">
+    <Compile Include="FormMailAuth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormmailAuth.Designer.cs">
-      <DependentUpon>FormmailAuth.cs</DependentUpon>
+    <Compile Include="FormMailAuth.Designer.cs">
+      <DependentUpon>FormMailAuth.cs</DependentUpon>
     </Compile>
     <Compile Include="mailIcon.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="FormApp.resx">
       <DependentUpon>FormApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormmailAuth.resx">
-      <DependentUpon>FormmailAuth.cs</DependentUpon>
+    <EmbeddedResource Include="FormMailAuth.resx">
+      <DependentUpon>FormMailAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mailIcon.resx">
       <Generator>ResXFileCodeGenerator</Generator>

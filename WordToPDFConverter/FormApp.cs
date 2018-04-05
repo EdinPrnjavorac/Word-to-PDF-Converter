@@ -30,8 +30,10 @@ namespace WordToPDFConverter
             
         }
 
+
         private bool convertClicked = false;
         public static string SetValueForText1 = "";
+
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -101,7 +103,6 @@ namespace WordToPDFConverter
                 this.Show();
             
         }
-            
             
 
         private void AppForm_Load(object sender, EventArgs e)
