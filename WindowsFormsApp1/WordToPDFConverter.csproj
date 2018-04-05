@@ -69,39 +69,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormApp.Designer.cs">
+      <DependentUpon>FormApp.cs</DependentUpon>
     </Compile>
     <Compile Include="logindbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>logindbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="mailAuth.cs">
+    <Compile Include="FormmailAuth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mailAuth.Designer.cs">
-      <DependentUpon>mailAuth.cs</DependentUpon>
+    <Compile Include="FormmailAuth.Designer.cs">
+      <DependentUpon>FormmailAuth.cs</DependentUpon>
     </Compile>
     <Compile Include="mailIcon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mailIcon.resx</DependentUpon>
     </Compile>
-    <Compile Include="PleaseWait.cs">
+    <Compile Include="FormPleaseWait.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PleaseWait.Designer.cs">
-      <DependentUpon>PleaseWait.cs</DependentUpon>
+    <Compile Include="FormPleaseWait.Designer.cs">
+      <DependentUpon>FormPleaseWait.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,21 +111,21 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormApp.resx">
+      <DependentUpon>FormApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mailAuth.resx">
-      <DependentUpon>mailAuth.cs</DependentUpon>
+    <EmbeddedResource Include="FormmailAuth.resx">
+      <DependentUpon>FormmailAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mailIcon.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mailIcon.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="PleaseWait.resx">
-      <DependentUpon>PleaseWait.cs</DependentUpon>
+    <EmbeddedResource Include="FormPleaseWait.resx">
+      <DependentUpon>FormPleaseWait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -169,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail-icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

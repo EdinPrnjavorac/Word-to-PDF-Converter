@@ -36,7 +36,7 @@
             this.btnsend = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtrecipient = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -110,19 +110,19 @@
             this.txtrecipient.TabIndex = 6;
             this.txtrecipient.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // button2
+            // btnback
             // 
-            this.button2.BackColor = System.Drawing.Color.Salmon;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Image = global::WordToPDFConverter.Properties.Resources.back_icon;
-            this.button2.Location = new System.Drawing.Point(-10, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 32);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnback.BackColor = System.Drawing.Color.Salmon;
+            this.btnback.FlatAppearance.BorderSize = 0;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnback.Image = global::WindowsFormsApp1.Properties.Resources.back_icon;
+            this.btnback.Location = new System.Drawing.Point(-10, 1);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 32);
+            this.btnback.TabIndex = 7;
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // mailAuth
             // 
@@ -130,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
             this.ClientSize = new System.Drawing.Size(578, 332);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.txtrecipient);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnsend);
@@ -156,6 +156,6 @@
         private System.Windows.Forms.Button btnsend;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtrecipient;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnback;
     }
 }

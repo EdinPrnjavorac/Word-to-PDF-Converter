@@ -11,7 +11,11 @@ using Microsoft.Office.Interop.Word;
 using System.IO;
 using SautinSoft;
 using SautinSoft.Document;
-
+using iTextSharp;
+using iTextSharp.text.pdf;
+using iTextSharp.text.xml;
+using iTextSharp.text.pdf.parser;
+using System.Text.RegularExpressions;
 
 namespace WordToPDFConverter
 {

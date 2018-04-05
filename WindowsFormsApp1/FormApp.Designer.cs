@@ -74,7 +74,7 @@
             // 
             this.btnmail.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmail.Image = global::WordToPDFConverter.mailIcon.Mail_icon;
+            this.btnmail.Image = global::WindowsFormsApp1.Properties.Resources.Mail_icon;
             this.btnmail.Location = new System.Drawing.Point(477, 316);
             this.btnmail.Name = "btnmail";
             this.btnmail.Size = new System.Drawing.Size(132, 66);

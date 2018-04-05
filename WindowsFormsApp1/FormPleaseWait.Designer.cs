@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(284, 103);
             this.Controls.Add(this.label1);
             this.Name = "PleaseWait";
+            this.ShowIcon = false;
             this.Text = "PleaseWait";
             this.Load += new System.EventHandler(this.PleaseWait_Load);
             this.ResumeLayout(false);
