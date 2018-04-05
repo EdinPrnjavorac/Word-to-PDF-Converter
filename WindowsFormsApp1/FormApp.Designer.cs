@@ -49,7 +49,7 @@
             this.btnconvert.TabIndex = 0;
             this.btnconvert.Text = "Convert";
             this.btnconvert.UseVisualStyleBackColor = false;
-            this.btnconvert.Click += new System.EventHandler(this.button1_Click);
+            this.btnconvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // txtfilename
             // 
@@ -57,7 +57,7 @@
             this.txtfilename.Name = "txtfilename";
             this.txtfilename.Size = new System.Drawing.Size(193, 20);
             this.txtfilename.TabIndex = 1;
-            this.txtfilename.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtfilename.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
             // 
             // btnbrowse
             // 
@@ -68,7 +68,7 @@
             this.btnbrowse.TabIndex = 2;
             this.btnbrowse.Text = "Browse";
             this.btnbrowse.UseVisualStyleBackColor = true;
-            this.btnbrowse.Click += new System.EventHandler(this.button2_Click);
+            this.btnbrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnmail
             // 
@@ -80,7 +80,7 @@
             this.btnmail.Size = new System.Drawing.Size(132, 66);
             this.btnmail.TabIndex = 7;
             this.btnmail.UseVisualStyleBackColor = true;
-            this.btnmail.Click += new System.EventHandler(this.mail_Click);
+            this.btnmail.Click += new System.EventHandler(this.btnMail_Click);
             // 
             // label1
             // 
@@ -102,7 +102,7 @@
             this.btnfilepreview.TabIndex = 9;
             this.btnfilepreview.Text = "File preview";
             this.btnfilepreview.UseVisualStyleBackColor = true;
-            this.btnfilepreview.Click += new System.EventHandler(this.button3_Click);
+            this.btnfilepreview.Click += new System.EventHandler(this.btnFilePreview_Click);
             // 
             // label2
             // 

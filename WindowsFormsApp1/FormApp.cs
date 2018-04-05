@@ -30,10 +30,10 @@ namespace WordToPDFConverter
             
         }
 
-        private bool button1Clicked = false;
+        private bool convertClicked = false;
         public static string SetValueForText1 = "";
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnBrowse_Click(object sender, EventArgs e)
         {
 
             
@@ -52,9 +52,9 @@ namespace WordToPDFConverter
 
 
         
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConvert_Click(object sender, EventArgs e)
         {
-                button1Clicked = true;
+                convertClicked = true;
 
                 this.Hide();
                 PleaseWait pw = new PleaseWait();
@@ -112,7 +112,7 @@ namespace WordToPDFConverter
             
         }
 
-        private void mail_Click(object sender, EventArgs e)
+        private void btnMail_Click(object sender, EventArgs e)
         {
 
             //opens new form with btnmail authentication and send button
@@ -126,16 +126,16 @@ namespace WordToPDFConverter
         }
 
         
-    public void textBox1_TextChanged(object sender, EventArgs e)
+    public void txtFileName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
 
         //file preview, if "Convert" was clicked
-        private void button3_Click(object sender, EventArgs e)
+        private void btnFilePreview_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtfilename.Text) && button1Clicked)
+            if (!String.IsNullOrEmpty(txtfilename.Text) && convertClicked)
             {
                 string filename = txtfilename.Text.Replace(".docx", ".pdf");
 
@@ -143,14 +143,14 @@ namespace WordToPDFConverter
                 System.Diagnostics.Process.Start(startInfo);
 
                 
-                button1Clicked = false;
+                convertClicked = false;
             }
             else
             {
                 System.Windows.Forms.MessageBox.Show("No file converted.");
             }
 
-            button1Clicked = false;
+            convertClicked = false;
         }
 
     }

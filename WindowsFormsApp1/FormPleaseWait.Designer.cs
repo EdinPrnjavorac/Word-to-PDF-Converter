@@ -35,7 +35,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(91, 42);
+            this.label1.Location = new System.Drawing.Point(121, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 103);
+            this.ClientSize = new System.Drawing.Size(349, 103);
             this.Controls.Add(this.label1);
             this.Name = "PleaseWait";
             this.ShowIcon = false;
